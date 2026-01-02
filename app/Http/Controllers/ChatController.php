@@ -3,15 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
+use App\Services\GptService;
 
 class ChatController extends Controller
 {
     public function index()
     {
-        // sementara: collection kosong
-        $chats = collect();
+        return view('chat');
+    }
 
-        return view('chat', compact('chats'));
+    public function send(Request $request, GptService $gpt)
+    {
+        $request->validate([
+            'message' => 'required|string|max:2000',
+        ]);
+
+        // Ambil konteks lama
+        $context = session()->get('chat_context', []);
+
+        // Tambah pesan user
+        $context[] = [
+            'role' => 'user',
+            'content' => $request->message,
+        ];
+        session()->put('chat_context', $context);
+
+        // Panggil GPT (NON STREAM)
+        $reply = $gpt->ask($context);
+
+        // Simpan jawaban ke konteks
+        $context[] = [
+            'role' => 'assistant',
+            'content' => $reply,
+        ];
+        session()->put('chat_context', $context);
+
+        return response()->json([
+            'reply' => $reply,
+        ]);
     }
 }
