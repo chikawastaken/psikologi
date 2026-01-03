@@ -18,7 +18,7 @@ class EdukasiSeeder extends Seeder
         Edukasi::create([
             'judul' => 'Tips Relaksasi',
             'kategori_edu' => 'infografis',
-            'gambar' => 'infografis\infografis1.webp',
+            'gambar' => 'infografis/infografis1.webp',
         ]);
     }
 }
