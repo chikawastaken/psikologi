@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EdukasiController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\RelaksasiController;
@@ -25,8 +26,14 @@ Route::get('/success', function () {
 
 //HOMEPAGE
 Route::get('/homepage', function () {
-    return 'HOMPAGE: Selamat datang di Edukasi Kesehatan Mental Gen Z';
+    return view('homepage.index');
 })->middleware('auth');
+
+//Profile
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])
+        ->name('profile.index');
+});
 
 //Edukasi Page
 Route::middleware('auth')->group(function () {
