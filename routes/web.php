@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EdukasiController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\RelaksasiController;
+use App\Http\Controllers\PsikologController;
 
 
 //LOGIN REGISTER
@@ -43,3 +44,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/relaksasi', [RelaksasiController::class, 'index']);
     Route::get('/relaksasi/{id}', [RelaksasiController::class, 'show']);
 });
+
+//Psikolog Page
+Route::middleware('auth')->group(function () {
+    Route::get('/psikolog', [PsikologController::class, 'index']);
+    Route::get('/psikolog/{id}', [PsikologController::class, 'show']);
+    Route::get('/psikolog/detail/{id}', [PsikologController::class, 'show'])->name('psikolog.detail');
+});
+
+// Route::get('/psikolog/detail/{id}', [PsikologController::class, 'detail'])->name('psikolog.detail');
