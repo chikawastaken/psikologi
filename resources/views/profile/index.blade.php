@@ -2,26 +2,74 @@
 
 @section('title', 'Profil Saya')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+@endpush
+
 @section('content')
-<h2>Profil Pengguna</h2>
 
-<hr>
+<section class="profile-container">
 
-<p>
-    <strong>Nickname:</strong><br>
-    {{ $user->nickname }}
-</p>
+    {{-- HEADER --}}
+    <div class="profile-header">
+        <h1>Profil Pengguna</h1>
+        <p>
+            Ringkasan perjalananmu di SERENICA 🤍  
+            Tidak harus sempurna, yang penting kamu hadir.
+        </p>
+    </div>
 
-<hr>
+    {{-- USER CARD --}}
+    <div class="profile-card">
+        <div class="profile-avatar">
+            {{ strtoupper(substr($user->nickname, 0, 1)) }}
+        </div>
 
-<h3>Ringkasan Aktivitas</h3>
+        <div class="profile-info">
+            <span class="profile-label">Nickname</span>
+            <h2>{{ $user->nickname }}</h2>
+        </div>
+    </div>
 
-<ul>
-    <li>Total sesi curhat: {{ $jumlahSesi }}</li>
-    <li>Total pesan curhat: {{ $jumlahPesan }}</li>
-</ul>
+    {{-- ACTIVITY --}}
+    <div class="profile-section">
+        <h3>Ringkasan Aktivitas</h3>
 
-<hr>
+        <div class="profile-stats single">
+            <div class="stat-card">
+                <span class="stat-number">{{ $jumlahSesi }}</span>
+                <span class="stat-label">Sesi Curhat yang Pernah Dibuka</span>
+            </div>
+        </div>
+    </div>
 
-<a href="/homepage">⬅ Kembali ke Homepage</a>
+    {{-- INSIGHT --}}
+    <div class="profile-insight">
+        <p>
+            ✨ Setiap sesi curhat yang kamu buka adalah bentuk keberanian.  
+            Terima kasih sudah berani hadir dan jujur pada dirimu sendiri.
+        </p>
+    </div>
+
+    {{-- ACTION --}}
+    <div class="profile-action-group">
+
+        <a href="/profile/edit-nickname" class="profile-action-btn">
+            ✏️ Ubah Nickname
+        </a>
+
+        <a href="/profile/edit-password" class="profile-action-btn secondary">
+            🔐 Ganti Password
+        </a>
+
+    </div>
+
+    <div class="profile-action">
+        <a href="/homepage" class="profile-back">
+            ← Kembali ke Homepage
+        </a>
+    </div>
+
+</section>
+
 @endsection

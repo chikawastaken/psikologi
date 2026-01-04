@@ -1,12 +1,50 @@
 @extends('layouts.app')
 
-@section('title', 'Detail Relaksasi')
+@section('title', $relaksasi->judul)
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/relaksasi.css') }}">
+@endpush
 
 @section('content')
-<h3>{{ $relaksasi->judul }}</h3>
 
-<p>{{ $relaksasi->deskripsi }}</p>
-<p>File: {{ $relaksasi->file_path }}</p>
+<section class="relax-detail">
 
-<a href="/relaksasi">⬅ Kembali</a>
+    <a href="/relaksasi" class="relax-back">← Kembali ke Ruang Refleksi</a>
+
+    <h1 class="relax-title">{{ $relaksasi->judul }}</h1>
+
+    <span class="relax-badge">
+        {{ ucfirst($relaksasi->tipe) }}
+    </span>
+
+    <p class="relax-desc">
+        {{ $relaksasi->deskripsi }}
+    </p>
+
+    {{-- BUKU --}}
+    @if ($relaksasi->tipe === 'buku')
+        <div class="relax-media">
+            <a 
+                href="{{ asset($relaksasi->file_path) }}" 
+                target="_blank"
+                class="relax-btn"
+            >
+                📖 Buka Buku
+            </a>
+        </div>
+    @endif
+
+    {{-- MUSIK --}}
+    @if ($relaksasi->tipe === 'musik')
+        <div class="relax-media">
+            <audio controls>
+                <source src="{{ asset($relaksasi->file_path) }}" type="audio/mpeg">
+                Browser kamu tidak mendukung audio.
+            </audio>
+        </div>
+    @endif
+
+</section>
+
 @endsection

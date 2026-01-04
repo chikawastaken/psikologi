@@ -3,24 +3,73 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 use App\Models\SesiCurhat;
-use App\Models\PesanCurhat;
 
 class ProfileController extends Controller
 {
     public function index()
     {
         $user = Auth::user();
-        $jumlahSesi = SesiCurhat::where('user_id', $user->id)->count();
 
-        $jumlahPesan = PesanCurhat::whereHas('sesiCurhat', function ($q) use ($user) {
-            $q->where('user_id', $user->id);
-        })->count();
+        return view('profile.index', [
+            'user' => $user,
+            'jumlahSesi' => SesiCurhat::where('user_id', $user->id)->count(),
+        ]);
+    }
 
-        return view('profile.index', compact(
-            'user',
-            'jumlahSesi',
-            'jumlahPesan'
-        ));
+    /* ===============================
+       EDIT NICKNAME
+       =============================== */
+    public function editNickname()
+    {
+        return view('profile.edit-nickname', [
+            'user' => Auth::user(),
+        ]);
+    }
+
+    public function updateNickname(Request $request)
+    {
+        $request->validate([
+            'nickname' => 'required|string|min:3|max:20',
+        ]);
+
+        $user = Auth::user();
+        $user->nickname = $request->nickname;
+        $user->save(); // ✅ LANGSUNG KE DATABASE
+
+        return redirect('/profile')
+            ->with('success', 'Nickname berhasil diperbarui 🌱');
+    }
+
+    /* ===============================
+       EDIT PASSWORD
+       =============================== */
+    public function editPassword()
+    {
+        return view('profile.edit-password');
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'password' => 'required|min:6|confirmed',
+        ]);
+
+        $user = Auth::user();
+
+        if (!Hash::check($request->current_password, $user->password)) {
+            return back()->withErrors([
+                'current_password' => 'Password lama tidak sesuai.',
+            ]);
+        }
+
+        $user->password = Hash::make($request->password);
+        $user->save(); // ✅ LANGSUNG KE DATABASE
+
+        return redirect('/profile')
+            ->with('success', 'Password berhasil diperbarui 🔒');
     }
 }

@@ -10,15 +10,34 @@ class EdukasiSeeder extends Seeder
     public function run(): void
     {
         Edukasi::create([
-            'judul' => 'Mengelola Stres Sehari-hari',
+            'judul' => 'Generasi Z dan Tantangan Kesehatan Mental',
             'kategori_edu' => 'artikel',
-            'isi_edu' => 'Artikel ini membahas cara sederhana mengelola stres dalam kehidupan sehari-hari.',
+            'isi_edu' => 'Artikel ini membahas tantangan kesehatan mental yang dihadapi Generasi Z, termasuk tekanan sosial, akademik, dan penggunaan media digital.',
+            'link_artikel' => 'https://rs.ui.ac.id/umum/berita-artikel/artikel-populer/generasi-gelisah-tantangan-kesehatan-mental-generasi-z-dan-milenial'
         ]);
 
         Edukasi::create([
-            'judul' => 'Tips Relaksasi',
+            'judul' => 'Isu Kesehatan Mental',
             'kategori_edu' => 'infografis',
             'gambar' => 'infografis/infografis1.webp',
+        ]);
+
+        Edukasi::create([
+            'judul' => 'Isu Kesehatan Mental',
+            'kategori_edu' => 'infografis',
+            'gambar' => 'infografis/04.webp',
+        ]);
+
+        Edukasi::create([
+            'judul' => 'Isu Kesehatan Mental',
+            'kategori_edu' => 'infografis',
+            'gambar' => 'infografis/03.webp',
+        ]);
+
+        Edukasi::create([
+            'judul' => 'Isu Kesehatan Mental',
+            'kategori_edu' => 'infografis',
+            'gambar' => 'infografis/02.jpg',
         ]);
     }
 }

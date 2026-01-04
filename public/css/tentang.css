@@ -1,0 +1,154 @@
+/* ===============================
+   TENTANG SERENICA
+   =============================== */
+
+/* HERO */
+.about-hero {
+    padding: 110px 48px 90px;
+    text-align: left; /* ⬅ penting: jangan center semua */
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(122,122,255,0.18), transparent 65%);
+    z-index: -1;
+}
+
+.about-hero h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.about-hero p {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.9;
+    max-width: 620px;
+}
+
+/* STORY */
+.about-story {
+    max-width: 1100px;
+    margin: 0 auto 96px;
+    padding: 0 48px;
+    position: relative;
+}
+
+.about-story::after {
+    content: '';
+    display: block;
+    margin-top: 64px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e5e7ff, transparent);
+}
+
+.about-story h2 {
+    font-size: 28px;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.about-story h2::after {
+    content: '';
+    width: 48px;
+    height: 4px;
+    background: #6a6afc;
+    display: block;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.about-story p {
+    max-width: 900px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* QUOTE */
+.about-quote {
+    max-width: 900px;
+    margin: 40px 0 0;
+    padding: 24px 28px;
+    background: #eef0ff;
+    border-left: 6px solid #6a6afc;
+    border-radius: 18px;
+    font-style: italic;
+    color: #333;
+}
+
+
+.about-quote::before {
+    content: '💭';
+    position: absolute;
+    top: -14px;
+    left: 22px;
+    font-size: 22px;
+}
+
+/* VALUES */
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto 120px;
+    padding: 0 24px;
+}
+
+.value-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 36px 30px;
+    box-shadow: 0 14px 45px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: all 0.35s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 60px rgba(122,122,255,0.25);
+}
+
+.value-icon {
+    font-size: 36px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.value-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .about-hero h1 {
+        font-size: 30px;
+    }
+
+    .about-story h2 {
+        font-size: 22px;
+    }
+
+    .about-quote {
+        padding: 18px 20px;
+    }
+}

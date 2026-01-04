@@ -1,36 +1,56 @@
 @extends('layouts.app')
-@section('title', 'Psikolog')
-@section('content')
-<h3>Daftar Psikolog</h3>
 
-    {{-- <table class="table table-bordered"> --}}
-<table border="1">
-    <thead>
-        <tr>
-            <th>No</th>
-            <th>Nama</th>
-            <th>Spesialis</th>
-            <th width="280px">Action</th>
-        </tr>
-    </thead>
-    <tbody>
+@section('title', 'Daftar Psikolog')
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/psikolog.css') }}">
+@endpush
+
+@section('content')
+
+<section class="psikolog-container">
+
+    {{-- HEADER --}}
+    <div class="psikolog-header">
+        <h1>Temukan Psikolog Profesional</h1>
+        <p>
+            Referensi tenaga profesional untuk membantu kamu
+            mengambil langkah yang tepat 🌱
+        </p>
+    </div>
+
+    {{-- LIST --}}
+    <div class="psikolog-grid">
         @foreach ($psikolog as $item)
-            <tr>
-                <td>{{ $item->id }}</td>
-                <td>{{ $item->nama_psikolog }}</td>
-                <td>{{ $item->spesialisasi }}</td>
-                <td>
-                    {{-- <a href="{{ route('psikolog.detail', $psikolog->id) }}">Detail Informasi</a> --}}
-                    <a href="/psikolog/{{ $item->id }}">Lihat Detail</a>
-                </td>
-            </tr>
+            <div class="psikolog-card">
+
+                <div class="psikolog-avatar">
+                    🧑‍⚕️
+                </div>
+
+                <div class="psikolog-info">
+                    <h3>{{ $item->nama_psikolog }}</h3>
+                    <span class="badge">{{ $item->spesialisasi }}</span>
+
+                    <p class="lokasi">
+                        📍 {{ $item->alamat_praktik }}
+                    </p>
+                </div>
+
+                <a href="/psikolog/{{ $item->id }}" class="btn-detail">
+                    Lihat Detail
+                </a>
+
+            </div>
         @endforeach
-    </tbody>
-</table>
-    {{-- <div>
-        <strong>{{ $item->nama }}</strong><br>
-        <small>Spesialis: {{ $item->spesialisasi }}</small><br>
-        <a href="/psikolog/{{ $item->id }}">Lihat Detail</a>
-        <hr>
-    </div> --}}
+    </div>
+
+    {{-- DISCLAIMER --}}
+    <p class="psikolog-disclaimer">
+        SERENICA tidak menyediakan layanan konsultasi atau penjadwalan.
+        Informasi psikolog ditampilkan sebagai referensi awal bagi pengguna.
+    </p>
+
+</section>
+
 @endsection

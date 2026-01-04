@@ -32,8 +32,17 @@ Route::get('/homepage', function () {
 
 //Profile
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'index'])
-        ->name('profile.index');
+
+    Route::get('/profile', [ProfileController::class, 'index']);
+
+    // Edit Nickname
+    Route::get('/profile/edit-nickname', [ProfileController::class, 'editNickname']);
+    Route::post('/profile/edit-nickname', [ProfileController::class, 'updateNickname']);
+
+    // Ganti Password
+    Route::get('/profile/edit-password', [ProfileController::class, 'editPassword']);
+    Route::post('/profile/edit-password', [ProfileController::class, 'updatePassword']);
+
 });
 
 //Edukasi Page
@@ -55,8 +64,15 @@ Route::middleware('auth')->group(function () {
 //Psikolog Page
 Route::middleware('auth')->group(function () {
     Route::get('/psikolog', [PsikologController::class, 'index']);
-    Route::get('/psikolog/{id}', [PsikologController::class, 'show']);
-    Route::get('/psikolog/detail/{id}', [PsikologController::class, 'show'])->name('psikolog.detail');
+    Route::get('/psikolog/{psikolog}', [PsikologController::class, 'show']);
 });
 
-// Route::get('/psikolog/detail/{id}', [PsikologController::class, 'detail'])->name('psikolog.detail');
+//Tentang Kami
+Route::get('/tentang', function () {
+    return view('tentang.index');
+})->middleware('auth');
+
+//Panduan
+Route::get('/panduan', function () {
+    return view('panduan.index');
+})->middleware('auth');

@@ -26,8 +26,8 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'nickname' => 'Nickname atau password salah',
-        ]);
+            'password' => 'auth_failed'
+        ])->withInput();
     }
 
     public function registerForm()

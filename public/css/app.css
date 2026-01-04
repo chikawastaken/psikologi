@@ -1,0 +1,263 @@
+/* =====================================================
+   SERENICA – AUTH FINAL CSS
+   ===================================================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+.auth-body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #7d7cff, #8f8fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', 'Inter', Arial, sans-serif;
+}
+
+.auth-title {
+    letter-spacing: -0.2px;
+}
+
+.auth-form input,
+.auth-form button {
+    letter-spacing: 0.2px;
+}
+
+/* =====================================================
+   AUTH CARD (FRAME BESAR – FIXED)
+   ===================================================== */
+.auth-card {
+    width: 900px;
+    height: 560px;              /* 🔒 FRAME TETAP */
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+    overflow: hidden;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* =====================================================
+   SPLIT LAYOUT
+   ===================================================== */
+.auth-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    height: 100%;
+}
+
+/* =====================================================
+   LEFT SIDE – WELCOME / BRANDING
+   ===================================================== */
+.auth-side-left {
+    background: linear-gradient(180deg, #4f5bd5, #6a6afc);
+    color: #ffffff;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-side-left h2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.auth-side-left p {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 280px;
+    opacity: 0.95;
+}
+
+/* =====================================================
+   RIGHT SIDE – FORM AREA (SCROLLABLE)
+   ===================================================== */
+.auth-side-right {
+    padding: 48px 56px;
+    overflow-y: auto;
+}
+
+/* Scrollbar aesthetic */
+.auth-side-right::-webkit-scrollbar {
+    width: 6px;
+}
+.auth-side-right::-webkit-scrollbar-thumb {
+    background: rgba(125,124,255,0.4);
+    border-radius: 10px;
+}
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+.auth-brand {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.auth-brand h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+/* =====================================================
+   TITLE & SUBTITLE
+   ===================================================== */
+.auth-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #6a6f8f;
+    margin-bottom: 34px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   ERROR GLOBAL (LEMBUT)
+   ===================================================== */
+.auth-error {
+    color: #8f1d1d;
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* =====================================================
+   FORM
+   ===================================================== */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* INPUT */
+.auth-form input {
+    height: 54px;
+    padding: 0 18px;
+    border-radius: 16px;
+    border: 1px solid #e3e5f1;
+    font-size: 15px;
+    background: #fafbff;
+    transition: all 0.25s ease;
+}
+
+.auth-form input::placeholder {
+    color: #a3a7c9;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #7d7cff;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(125,124,255,0.25);
+}
+
+/* =====================================================
+   INLINE FIELD ERROR (TAMBAHAN UTAMA)
+   ===================================================== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-error {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #b94a48;
+    line-height: 1.5;
+}
+
+/* INPUT ERROR STATE */
+.input-error {
+    border-color: #ffbcbc !important;
+    background: #fff7f7 !important;
+}
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+.auth-form button {
+    height: 54px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(135deg, #7d7cff, #6a6afc);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(122,122,255,0.45);
+}
+
+/* =====================================================
+   SWITCH LINK
+   ===================================================== */
+.auth-switch {
+    margin-top: 36px;
+    padding-top: 22px;
+    border-top: 1px solid #f1f2fa;
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth-switch a {
+    color: #6a6afc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* =====================================================
+   ANIMATION
+   ===================================================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 960px) {
+    .auth-card {
+        width: 92%;
+        height: auto;
+    }
+
+    .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-side-left {
+        display: none;
+    }
+
+    .auth-side-right {
+        padding: 42px 36px;
+    }
+}

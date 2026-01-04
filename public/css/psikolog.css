@@ -1,0 +1,213 @@
+/* ===============================
+   PSIKOLOG PAGE
+   =============================== */
+
+.psikolog-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 100px;
+}
+
+/* HEADER */
+.psikolog-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.psikolog-header h1 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.psikolog-header p {
+    color: #666;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* GRID */
+.psikolog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+/* CARD */
+.psikolog-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 28px 26px 32px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.35s ease;
+}
+
+.psikolog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 60px rgba(122,122,255,0.25);
+}
+
+/* AVATAR */
+.psikolog-avatar {
+    font-size: 42px;
+    background: #eef0ff;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+/* INFO */
+.psikolog-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.badge {
+    display: inline-block;
+    background: #eef0ff;
+    color: #6a6afc;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.lokasi {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 22px;
+}
+
+/* BUTTON */
+.btn-detail {
+    margin-top: auto;
+    background: linear-gradient(135deg, #6a6afc, #7d7cff);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(122,122,255,0.45);
+}
+
+/* DISCLAIMER */
+.psikolog-disclaimer {
+    margin-top: 56px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .psikolog-header h1 {
+        font-size: 26px;
+    }
+}
+
+/* ===============================
+   PSIKOLOG DETAIL PAGE
+   =============================== */
+
+.psikolog-detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 120px;
+    text-align: center;
+}
+
+/* BACK LINK */
+.back-link {
+    display: inline-block;
+    margin-bottom: 32px;
+    color: #6a6afc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* CARD */
+.psikolog-detail-card {
+    background: #ffffff;
+    border-radius: 26px;
+    padding: 48px 36px;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.1);
+}
+
+/* AVATAR BESAR */
+.psikolog-avatar-big {
+    font-size: 64px;
+    background: #eef0ff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* NAMA */
+.psikolog-detail-card h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+/* DESKRIPSI */
+.psikolog-desc {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #444;
+    max-width: 640px;
+    margin: 24px auto 36px;
+}
+
+/* INFO LIST */
+.psikolog-info-list {
+    font-size: 15px;
+    color: #333;
+}
+
+.psikolog-info-list p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .psikolog-detail-card {
+        padding: 36px 24px;
+    }
+
+    .psikolog-detail-card h2 {
+        font-size: 22px;
+    }
+
+    .psikolog-avatar-big {
+        width: 84px;
+        height: 84px;
+        font-size: 52px;
+    }
+}
