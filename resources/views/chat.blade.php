@@ -22,7 +22,7 @@
     </div>
 
     <div id="typing" class="typing" style="display:none;">
-        Psikolog sedang mengetik<span class="dots">...</span>
+        Psikolog sedang mengetik<span class="dots"></span>
     </div>
 
     <div class="input-area">
