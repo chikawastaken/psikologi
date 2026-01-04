@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -29,6 +29,26 @@
 <main>
     @yield('content')
 </main>
+
+</body>
+</html> --}}
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('title', 'Hidup Nowo')</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+
+    @include('components.navbar')
+
+    @yield('content')
+
+    @include('components.footer')
 
 </body>
 </html>
