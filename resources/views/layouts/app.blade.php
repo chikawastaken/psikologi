@@ -39,7 +39,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>@yield('title', 'Hidup Nowo')</title>
+    <title>@yield('title', 'Hidup Kelompok 3')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Hidup Nowo')
+@section('title', 'Hidup Kelompok 3')
 
 @section('content')
 
@@ -10,8 +10,8 @@
     <h2>Himpunan Penjilat Nowo</h2>
 
     <p class="hero-text">
-        NOWO JOGJA NOWO JOGJA NOWO JOGJA NOWO JOGJA NOWO JOGJA
-        NOWO JOGJA NOWO JOGJA NOWO JOGJA NOWO JOGJA
+        Kelompok 3 uteyeeeeeeeeeeeeee
+        cihuyy
     </p>
 </section>
 
@@ -27,7 +27,7 @@
 </section>
 
 <div class="banner">
-    PADA INTINYA SAJA HIDUP NOWO
+    PADA INTINYA kelompok 3
 </div>
 
 @endsection
