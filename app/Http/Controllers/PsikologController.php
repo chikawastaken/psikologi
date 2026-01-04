@@ -11,12 +11,10 @@ class PsikologController extends Controller
     {
         $query = Psikolog::query();
 
-        // filter spesialisasi
         if ($request->filled('spesialisasi')) {
             $query->where('spesialisasi', 'like', '%' . $request->spesialisasi . '%');
         }
 
-        // filter lokasi
         if ($request->filled('lokasi')) {
             $query->where('alamat_praktik', 'like', '%' . $request->lokasi . '%');
         }
