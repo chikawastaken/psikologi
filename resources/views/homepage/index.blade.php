@@ -1,10 +1,7 @@
 @extends('layouts.app')
-
 @section('title', 'Homepage')
-
 @section('content')
 
-{{-- HERO --}}
 <section class="hero">
     <div class="hero-text">
         <h1>Selamat Datang Di SERENICA</h1>
@@ -19,7 +16,6 @@
     </div>
 </section>
 
-{{-- PENGANTAR --}}
 <section class="intro-section">
     <h2>Ruang Aman untuk Belajar Mengenal Diri 🤍</h2>
 
@@ -41,7 +37,6 @@
     </p>
 </section>
 
-{{-- MENU --}}
 <section class="menu-section">
     <h2>Silakan Pilih Menu</h2>
 
@@ -64,7 +59,7 @@
 
         <a href="/psikolog" class="menu-card">
             <h3>🧠 Psikolog</h3>
-            <p>Temukan bantuan profesional terdekat</p>
+            <p>Temukan referensi tenaga profesional sesuai kondisi kamu</p>
         </a>
 
     </div>

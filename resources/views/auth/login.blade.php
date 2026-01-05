@@ -1,33 +1,9 @@
-{{-- @extends('layouts.auth')
-
-@section('title', 'Login')
-
-@section('content')
-<h3>Login</h3>
-
-@if ($errors->any())
-    <p style="color:red">{{ $errors->first() }}</p>
-@endif
-
-<form method="POST" action="/login">
-    @csrf
-    <input name="nickname" placeholder="Nickname"><br><br>
-    <input type="password" name="password" placeholder="Password"><br><br>
-    <button type="submit">Login</button>
-</form>
-
-<p><a href="/register">Belum punya akun?</a></p>
-@endsection --}}
-
 @extends('layouts.auth')
-
 @section('title', 'Login')
-
 @section('content')
 
 <div class="auth-layout">
 
-    {{-- LEFT SIDE : WELCOME (EMOSI) --}}
     <div class="auth-side-left">
         <h2>WELCOME BACK</h2>
         <p>
@@ -36,23 +12,20 @@
         </p>
     </div>
 
-    {{-- RIGHT SIDE : LOGIN (AKSI) --}}
     <div class="auth-side-right">
 
-        {{-- BRAND --}}
         <div class="auth-brand">
             <h1>SERENICA</h1>
         </div>
 
         <h3 class="auth-title">Selamat datang kembali</h3>
         <p class="auth-subtitle">
-            Kami senang kamu di sini. Ambil napas sebentar, lalu masuk 🌿
+            Kami senang kamu di sini. Ambil napas sebentar, lalu masuk untuk memulai
         </p>
 
         <form method="POST" action="/login" class="auth-form">
             @csrf
 
-            {{-- NICKNAME --}}
             <div class="form-group">
                 <input 
                     type="text" 
@@ -65,24 +38,22 @@
 
                 @error('nickname')
                     <small class="field-error">
-                        Nama panggilan belum sesuai. Coba cek lagi ya 🤍
+                        Nama panggilan belum sesuai. Coba cek lagi yaa
                     </small>
                 @enderror
             </div>
 
-            {{-- PASSWORD --}}
             <div class="form-group">
                 <input 
                     type="password" 
                     name="password" 
                     placeholder="Kata sandi"
                     class="@error('password') input-error @enderror"
-                    required
-                >
+                    required>
 
                 @error('password')
                     <small class="field-error">
-                        Kata sandinya belum tepat. Tidak apa-apa, coba lagi 🤍
+                        Kata sandinya belum tepat. Tidak apa-apa, coba lagi 
                     </small>
                 @enderror
             </div>

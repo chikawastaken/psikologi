@@ -1,14 +1,9 @@
-/* ===============================
-   EDUKASI PAGE
-   =============================== */
-
 .edu-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 24px 80px;
 }
 
-/* HEADER */
 .edu-header {
     text-align: center;
     margin-bottom: 64px;
@@ -26,7 +21,6 @@
     margin: 0 auto;
 }
 
-/* HIGHLIGHT */
 .edu-highlight {
     background: linear-gradient(135deg, #5a5cff, #7d7cff);
     color: #fff;
@@ -46,7 +40,6 @@
     opacity: 0.95;
 }
 
-/* SECTION */
 .edu-section {
     margin-bottom: 72px;
 }
@@ -67,10 +60,6 @@
     margin-top: 8px;
     border-radius: 4px;
 }
-
-/* ===============================
-   ARTIKEL GRID
-   =============================== */
 
 .edu-grid {
     display: grid;
@@ -114,17 +103,12 @@
     color: #6a6afc;
 }
 
-/* ===============================
-   INFOGRAFIS GRID (RAPI DESKTOP)
-   =============================== */
-
 .edu-infogrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
 }
 
-/* INFO CARD */
 .info-card {
     background: #ffffff;
     border-radius: 22px;
@@ -140,7 +124,6 @@
     box-shadow: 0 22px 60px rgba(122,122,255,0.25);
 }
 
-/* IMAGE */
 .info-thumb {
     height: 200px;
     background: #eef1ff;
@@ -158,7 +141,6 @@
     transform: scale(1.08);
 }
 
-/* CONTENT */
 .info-content {
     padding: 20px 22px 24px;
 }
@@ -177,14 +159,14 @@
     line-height: 1.4;
 }
 
-/* ===============================
-   DETAIL PAGE (INFOGRAFIS BESAR)
-   =============================== */
-
 .edu-detail {
-    max-width: 1100px;   /* ⬅ lebih lebar */
+    max-width: 1100px;   
     margin: 0 auto;
     padding: 40px 24px 120px;
+}
+
+.edu-action {
+    text-align: center;
 }
 
 .edu-back {
@@ -210,7 +192,6 @@
     margin-bottom: 28px;
 }
 
-/* INFOGRAFIS FULL VIEW */
 .edu-image {
     margin-top: 48px;
     display: flex;
@@ -227,7 +208,6 @@
     box-shadow: 0 28px 80px rgba(0,0,0,0.28);
 }
 
-/* RESPONSIVE */
 @media (max-width: 640px) {
     .info-thumb {
         height: 180px;

@@ -1,14 +1,9 @@
-/* ===============================
-   RELAKSASI
-   =============================== */
-
 .relax-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 24px 100px;
 }
 
-/* HEADER */
 .relax-header {
     text-align: center;
     margin-bottom: 72px;
@@ -26,7 +21,6 @@
     line-height: 1.8;
 }
 
-/* SECTION */
 .relax-section {
     margin-bottom: 72px;
 }
@@ -36,14 +30,12 @@
     margin-bottom: 28px;
 }
 
-/* GRID */
 .relax-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
 }
 
-/* CARD */
 .relax-card {
     background: #fff;
     border-radius: 22px;
@@ -57,11 +49,6 @@
 .relax-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 45px rgba(122,122,255,0.25);
-}
-
-.relax-icon {
-    font-size: 36px;
-    margin-bottom: 14px;
 }
 
 .relax-card h3 {
@@ -82,14 +69,14 @@
     font-weight: 600;
 }
 
-/* ===============================
-   DETAIL
-   =============================== */
-
 .relax-detail {
     max-width: 760px;
     margin: 0 auto;
     padding: 40px 24px 120px;
+    text-align: center;
+}
+
+.relax-action {
     text-align: center;
 }
 
@@ -122,7 +109,6 @@
     margin-bottom: 32px;
 }
 
-/* MEDIA */
 .relax-media {
     margin-top: 32px;
 }

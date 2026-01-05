@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Ruang Refleksi')
+@section('title', 'Ruang Relaksasi')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/relaksasi.css') }}">
@@ -10,41 +10,36 @@
 
 <section class="relax-container">
 
-    {{-- HEADER --}}
     <div class="relax-header">
-        <h1>Ruang Refleksi</h1>
+        <h1>Ruang Relaksasi</h1>
         <p>
-            Temukan dukungan melalui literasi, musik, dan aktivitas
+            Temukan dukungan melalui literasi, dan musik
             yang dikurasi sesuai kondisi emosionalmu hari ini.
         </p>
     </div>
 
-    {{-- LITERASI --}}
     <div class="relax-section">
         <h2>📚 Literasi Pemulihan</h2>
 
         <div class="relax-grid">
             @foreach ($relaksasi->where('tipe', 'buku') as $item)
                 <a href="/relaksasi/{{ $item->id }}" class="relax-card">
-                    <div class="relax-icon">📘</div>
 
                     <h3>{{ $item->judul }}</h3>
                     <p>{{ Str::limit($item->deskripsi, 90) }}</p>
 
-                    <span class="relax-link">Baca panduan →</span>
+                    <span class="relax-link">Baca →</span>
                 </a>
             @endforeach
         </div>
     </div>
 
-    {{-- MUSIK --}}
     <div class="relax-section">
         <h2>🎧 Audio Terapi & Musik</h2>
 
         <div class="relax-grid">
             @foreach ($relaksasi->where('tipe', 'musik') as $item)
                 <a href="/relaksasi/{{ $item->id }}" class="relax-card">
-                    <div class="relax-icon">🎵</div>
 
                     <h3>{{ $item->judul }}</h3>
                     <p>{{ Str::limit($item->deskripsi, 90) }}</p>
@@ -53,6 +48,12 @@
                 </a>
             @endforeach
         </div>
+    </div>
+
+    <div class="relax-action">
+        <a href="/homepage" class="relax-back">
+            ← Kembali ke Homepage
+        </a>
     </div>
 
 </section>

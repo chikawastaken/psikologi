@@ -10,7 +10,7 @@
 
 <section class="relax-detail">
 
-    <a href="/relaksasi" class="relax-back">← Kembali ke Ruang Refleksi</a>
+    <a href="/relaksasi" class="relax-back">← Kembali ke Ruang Relaksasi</a>
 
     <h1 class="relax-title">{{ $relaksasi->judul }}</h1>
 
@@ -22,7 +22,6 @@
         {{ $relaksasi->deskripsi }}
     </p>
 
-    {{-- BUKU --}}
     @if ($relaksasi->tipe === 'buku')
         <div class="relax-media">
             <a 
@@ -35,7 +34,6 @@
         </div>
     @endif
 
-    {{-- MUSIK --}}
     @if ($relaksasi->tipe === 'musik')
         <div class="relax-media">
             <audio controls>

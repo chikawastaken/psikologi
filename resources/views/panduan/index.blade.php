@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('title', 'Panduan SERENICA')
 
 @push('styles')
@@ -7,8 +6,6 @@
 @endpush
 
 @section('content')
-
-    {{-- HERO --}}
     <section class="guide-hero">
         <h1>Panduan Menggunakan SERENICA</h1>
         <p>
@@ -17,7 +14,6 @@
         </p>
     </section>
 
-    {{-- INTRO --}}
     <section class="guide-intro">
         <p>
             Kamu tidak harus menggunakan semua fitur.<br>
@@ -25,11 +21,8 @@
         </p>
     </section>
 
-    {{-- FEATURES --}}
     <section class="guide-features">
         <div class="guide-grid">
-
-            {{-- EDUKASI --}}
             <div class="guide-card">
                 <span class="guide-icon">📘</span>
                 <h3>Edukasi</h3>
@@ -46,8 +39,6 @@
                     Cocok saat ingin memahami diri
                 </span>
             </div>
-
-            {{-- CURHAT --}}
             <div class="guide-card">
                 <span class="guide-icon">💬</span>
                 <h3>Curhat</h3>
@@ -64,8 +55,6 @@
                     Cocok saat hati terasa penuh
                 </span>
             </div>
-
-            {{-- RELAKSASI --}}
             <div class="guide-card">
                 <span class="guide-icon">🎧</span>
                 <h3>Relaksasi</h3>
@@ -82,8 +71,6 @@
                     Cocok saat lelah mental
                 </span>
             </div>
-
-            {{-- PSIKOLOG --}}
             <div class="guide-card">
                 <span class="guide-icon">🧠</span>
                 <h3>Psikolog</h3>
@@ -92,7 +79,7 @@
                     dukungan profesional jika dibutuhkan.
                 </p>
                 <ul>
-                    <li>Rujukan bantuan profesional</li>
+                    <li>Rekomendasi bantuan profesional</li>
                     <li>Bukan pengganti terapi</li>
                     <li>Langkah awal mencari bantuan</li>
                 </ul>
@@ -100,11 +87,9 @@
                     Cocok saat butuh pendampingan lanjut
                 </span>
             </div>
-
         </div>
     </section>
 
-    {{-- CLOSING --}}
     <section class="guide-closing">
         <p>
             Tidak ada urutan yang benar.<br>

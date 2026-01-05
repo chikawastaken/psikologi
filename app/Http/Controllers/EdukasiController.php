@@ -11,7 +11,7 @@ class EdukasiController extends Controller
             $edukasi = Edukasi::all();
             return view('edukasi.index', compact('edukasi'));
         }
-
+        
     public function show($id)
         {
             $edukasi = Edukasi::findOrFail($id);

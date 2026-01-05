@@ -17,25 +17,32 @@ class EdukasiSeeder extends Seeder
         ]);
 
         Edukasi::create([
-            'judul' => 'Isu Kesehatan Mental',
-            'kategori_edu' => 'infografis',
-            'gambar' => 'infografis/infografis1.webp',
+            'judul' => 'Pentingnya Self-Care bagi Kesehatan Mental Remaja',
+            'kategori_edu' => 'artikel',
+            'isi_edu' => 'Artikel ini membahas pentingnya praktik self-care bagi remaja untuk menjaga kesehatan mental, seperti mengatur waktu istirahat, mengenali emosi, dan menjaga keseimbangan antara aktivitas digital dan kehidupan nyata.',
+            'link_artikel' => 'https://www.alodokter.com/pentingnya-self-care-untuk-kesehatan-mental'
         ]);
 
         Edukasi::create([
-            'judul' => 'Isu Kesehatan Mental',
+            'judul' => 'Pulih Dari Cemas',
             'kategori_edu' => 'infografis',
-            'gambar' => 'infografis/04.webp',
+            'gambar' => 'infografis/4.jpg',
         ]);
 
         Edukasi::create([
-            'judul' => 'Isu Kesehatan Mental',
+            'judul' => 'Remaja Keren Peduli Mental Health',
             'kategori_edu' => 'infografis',
-            'gambar' => 'infografis/03.webp',
+            'gambar' => 'infografis/3.jpg',
         ]);
 
         Edukasi::create([
-            'judul' => 'Isu Kesehatan Mental',
+            'judul' => 'Senyum Bisa Bohong',
+            'kategori_edu' => 'infografis',
+            'gambar' => 'infografis/1.jpg',
+        ]);
+
+        Edukasi::create([
+            'judul' => 'Pentingnya Menjaga Kesehatan Mental',
             'kategori_edu' => 'infografis',
             'gambar' => 'infografis/02.jpg',
         ]);

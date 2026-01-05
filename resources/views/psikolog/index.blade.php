@@ -9,8 +9,6 @@
 @section('content')
 
 <section class="psikolog-container">
-
-    {{-- HEADER --}}
     <div class="psikolog-header">
         <h1>Temukan Psikolog Profesional</h1>
         <p>
@@ -18,8 +16,6 @@
             mengambil langkah yang tepat 🌱
         </p>
     </div>
-
-    {{-- LIST --}}
     <div class="psikolog-grid">
         @foreach ($psikolog as $item)
             <div class="psikolog-card">
@@ -44,12 +40,17 @@
             </div>
         @endforeach
     </div>
-
-    {{-- DISCLAIMER --}}
     <p class="psikolog-disclaimer">
         SERENICA tidak menyediakan layanan konsultasi atau penjadwalan.
         Informasi psikolog ditampilkan sebagai referensi awal bagi pengguna.
     </p>
+
+
+    <div class="psikolog-action">
+        <a href="/homepage" class="psikolog-back">
+            ← Kembali ke Homepage
+        </a>
+    </div>
 
 </section>
 

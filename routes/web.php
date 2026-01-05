@@ -9,70 +9,54 @@ use App\Http\Controllers\RelaksasiController;
 use App\Http\Controllers\PsikologController;
 
 
-//LOGIN REGISTER
 Route::get('/', fn () => redirect("/login"));
-
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-
 Route::get('/register', [AuthController::class, 'registerForm']);
 Route::post('/register', [AuthController::class, 'register']);
-
 Route::post('/logout', [AuthController::class, 'logout'])
     ->middleware('auth');
-
 Route::get('/success', function () {
     return 'Login kamu berhasilll, celamatt!!';
 })->middleware('auth');
 
-//HOMEPAGE
 Route::get('/homepage', function () {
     return view('homepage.index');
 })->middleware('auth');
 
-//Profile
 Route::middleware('auth')->group(function () {
-
     Route::get('/profile', [ProfileController::class, 'index']);
-
-    // Edit Nickname
     Route::get('/profile/edit-nickname', [ProfileController::class, 'editNickname']);
     Route::post('/profile/edit-nickname', [ProfileController::class, 'updateNickname']);
-
-    // Ganti Password
     Route::get('/profile/edit-password', [ProfileController::class, 'editPassword']);
     Route::post('/profile/edit-password', [ProfileController::class, 'updatePassword']);
-
 });
 
-//Edukasi Page
 Route::middleware('auth')->group(function () {
     Route::get('/edukasi', [EdukasiController::class, 'index']);
     Route::get('/edukasi/{id}', [EdukasiController::class, 'show']);
 });
 
-// CHAT WRAPPER
-Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
-Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
+Route::middleware('auth')->group(function () {
+    Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
+    Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
+});
 
-//Relaksasi Page
 Route::middleware('auth')->group(function () {
     Route::get('/relaksasi', [RelaksasiController::class, 'index']);
     Route::get('/relaksasi/{id}', [RelaksasiController::class, 'show']);
 });
 
-//Psikolog Page
 Route::middleware('auth')->group(function () {
     Route::get('/psikolog', [PsikologController::class, 'index']);
     Route::get('/psikolog/{psikolog}', [PsikologController::class, 'show']);
+
 });
 
-//Tentang Kami
 Route::get('/tentang', function () {
     return view('tentang.index');
 })->middleware('auth');
 
-//Panduan
 Route::get('/panduan', function () {
     return view('panduan.index');
 })->middleware('auth');

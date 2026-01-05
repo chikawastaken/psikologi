@@ -19,9 +19,6 @@ class ProfileController extends Controller
         ]);
     }
 
-    /* ===============================
-       EDIT NICKNAME
-       =============================== */
     public function editNickname()
     {
         return view('profile.edit-nickname', [
@@ -37,15 +34,12 @@ class ProfileController extends Controller
 
         $user = Auth::user();
         $user->nickname = $request->nickname;
-        $user->save(); // ✅ LANGSUNG KE DATABASE
+        $user->save();
 
         return redirect('/profile')
-            ->with('success', 'Nickname berhasil diperbarui 🌱');
+            ->with('success', 'Nickname berhasil diperbarui');
     }
 
-    /* ===============================
-       EDIT PASSWORD
-       =============================== */
     public function editPassword()
     {
         return view('profile.edit-password');
@@ -67,9 +61,9 @@ class ProfileController extends Controller
         }
 
         $user->password = Hash::make($request->password);
-        $user->save(); // ✅ LANGSUNG KE DATABASE
+        $user->save();
 
         return redirect('/profile')
-            ->with('success', 'Password berhasil diperbarui 🔒');
+            ->with('success', 'Password berhasil diperbarui');
     }
 }

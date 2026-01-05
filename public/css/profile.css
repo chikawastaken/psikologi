@@ -1,14 +1,9 @@
-/* ===============================
-   PROFILE PAGE
-   =============================== */
-
 .profile-container {
     max-width: 820px;
     margin: 0 auto;
     padding: 40px 24px 120px;
 }
 
-/* HEADER */
 .profile-header {
     text-align: center;
     margin-bottom: 48px;
@@ -24,7 +19,6 @@
     line-height: 1.8;
 }
 
-/* USER CARD */
 .profile-card {
     background: #ffffff;
     border-radius: 24px;
@@ -60,13 +54,11 @@
     letter-spacing: 0.5px;
 }
 
-/* SECTION */
 .profile-section h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-/* STATS */
 .profile-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -95,7 +87,6 @@
     color: #666;
 }
 
-/* INSIGHT */
 .profile-insight {
     background: #f1f3ff;
     border-radius: 20px;
@@ -106,7 +97,6 @@
     margin-bottom: 40px;
 }
 
-/* ACTION */
 .profile-action {
     text-align: center;
 }
@@ -117,7 +107,6 @@
     text-decoration: none;
 }
 
-/* RESPONSIVE */
 @media (max-width: 640px) {
     .profile-card {
         flex-direction: column;
@@ -129,13 +118,11 @@
     }
 }
 
-/* SINGLE STAT MODE */
 .profile-stats.single {
     grid-template-columns: 1fr;
     max-width: 360px;
 }
 
-/* ACTION GROUP */
 .profile-action-group {
     display: flex;
     justify-content: center;

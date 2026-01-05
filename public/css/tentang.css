@@ -1,11 +1,6 @@
-/* ===============================
-   TENTANG SERENICA
-   =============================== */
-
-/* HERO */
 .about-hero {
     padding: 110px 48px 90px;
-    text-align: left; /* ⬅ penting: jangan center semua */
+    text-align: left; 
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
@@ -35,7 +30,6 @@
     max-width: 620px;
 }
 
-/* STORY */
 .about-story {
     max-width: 1100px;
     margin: 0 auto 96px;
@@ -75,7 +69,6 @@
     margin-bottom: 18px;
 }
 
-/* QUOTE */
 .about-quote {
     max-width: 900px;
     margin: 40px 0 0;
@@ -96,7 +89,6 @@
     font-size: 22px;
 }
 
-/* VALUES */
 .about-values {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -138,7 +130,6 @@
     line-height: 1.7;
 }
 
-/* RESPONSIVE */
 @media (max-width: 640px) {
     .about-hero h1 {
         font-size: 30px;

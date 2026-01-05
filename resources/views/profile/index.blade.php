@@ -10,7 +10,6 @@
 
 <section class="profile-container">
 
-    {{-- HEADER --}}
     <div class="profile-header">
         <h1>Profil Pengguna</h1>
         <p>
@@ -19,7 +18,6 @@
         </p>
     </div>
 
-    {{-- USER CARD --}}
     <div class="profile-card">
         <div class="profile-avatar">
             {{ strtoupper(substr($user->nickname, 0, 1)) }}
@@ -31,7 +29,6 @@
         </div>
     </div>
 
-    {{-- ACTIVITY --}}
     <div class="profile-section">
         <h3>Ringkasan Aktivitas</h3>
 
@@ -43,7 +40,6 @@
         </div>
     </div>
 
-    {{-- INSIGHT --}}
     <div class="profile-insight">
         <p>
             ✨ Setiap sesi curhat yang kamu buka adalah bentuk keberanian.  
@@ -51,22 +47,14 @@
         </p>
     </div>
 
-    {{-- ACTION --}}
     <div class="profile-action-group">
 
         <a href="/profile/edit-nickname" class="profile-action-btn">
-            ✏️ Ubah Nickname
+            Ubah Nickname
         </a>
 
         <a href="/profile/edit-password" class="profile-action-btn secondary">
-            🔐 Ganti Password
-        </a>
-
-    </div>
-
-    <div class="profile-action">
-        <a href="/homepage" class="profile-back">
-            ← Kembali ke Homepage
+            Ganti Password
         </a>
     </div>
 

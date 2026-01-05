@@ -1,14 +1,9 @@
-/* ===============================
-   PSIKOLOG PAGE
-   =============================== */
-
 .psikolog-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 24px 100px;
 }
 
-/* HEADER */
 .psikolog-header {
     text-align: center;
     margin-bottom: 56px;
@@ -26,14 +21,12 @@
     margin: 0 auto;
 }
 
-/* GRID */
 .psikolog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
 }
 
-/* CARD */
 .psikolog-card {
     background: #ffffff;
     border-radius: 22px;
@@ -51,7 +44,6 @@
     box-shadow: 0 22px 60px rgba(122,122,255,0.25);
 }
 
-/* AVATAR */
 .psikolog-avatar {
     font-size: 42px;
     background: #eef0ff;
@@ -64,7 +56,6 @@
     margin-bottom: 18px;
 }
 
-/* INFO */
 .psikolog-info h3 {
     font-size: 18px;
     font-weight: 600;
@@ -87,7 +78,6 @@
     margin-bottom: 22px;
 }
 
-/* BUTTON */
 .btn-detail {
     margin-top: auto;
     background: linear-gradient(135deg, #6a6afc, #7d7cff);
@@ -105,7 +95,6 @@
     box-shadow: 0 10px 26px rgba(122,122,255,0.45);
 }
 
-/* DISCLAIMER */
 .psikolog-disclaimer {
     margin-top: 56px;
     font-size: 13px;
@@ -117,16 +106,11 @@
     line-height: 1.7;
 }
 
-/* RESPONSIVE */
 @media (max-width: 640px) {
     .psikolog-header h1 {
         font-size: 26px;
     }
 }
-
-/* ===============================
-   PSIKOLOG DETAIL PAGE
-   =============================== */
 
 .psikolog-detail-container {
     max-width: 900px;
@@ -135,7 +119,6 @@
     text-align: center;
 }
 
-/* BACK LINK */
 .back-link {
     display: inline-block;
     margin-bottom: 32px;
@@ -148,7 +131,6 @@
     text-decoration: underline;
 }
 
-/* CARD */
 .psikolog-detail-card {
     background: #ffffff;
     border-radius: 26px;
@@ -156,7 +138,6 @@
     box-shadow: 0 24px 70px rgba(0,0,0,0.1);
 }
 
-/* AVATAR BESAR */
 .psikolog-avatar-big {
     font-size: 64px;
     background: #eef0ff;
@@ -169,13 +150,11 @@
     justify-content: center;
 }
 
-/* NAMA */
 .psikolog-detail-card h2 {
     font-size: 26px;
     margin-bottom: 12px;
 }
 
-/* DESKRIPSI */
 .psikolog-desc {
     font-size: 15px;
     line-height: 1.9;
@@ -184,7 +163,6 @@
     margin: 24px auto 36px;
 }
 
-/* INFO LIST */
 .psikolog-info-list {
     font-size: 15px;
     color: #333;
@@ -195,7 +173,6 @@
     line-height: 1.7;
 }
 
-/* RESPONSIVE */
 @media (max-width: 640px) {
     .psikolog-detail-card {
         padding: 36px 24px;
@@ -210,4 +187,14 @@
         height: 84px;
         font-size: 52px;
     }
+}
+
+.psikolog-action {
+    text-align: center;
+}
+
+.psikolog-back {
+    color: #6a6afc;
+    font-weight: 600;
+    text-decoration: none;
 }

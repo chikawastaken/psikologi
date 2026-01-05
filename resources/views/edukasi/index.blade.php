@@ -1,22 +1,4 @@
-{{-- @extends('layouts.app')
-
-@section('title', 'Edukasi')
-
-@section('content')
-<h3>Menu Edukasi</h3>
-
-@foreach ($edukasi as $item)
-    <div>
-        <strong>{{ $item->judul }}</strong><br>
-        <small>Kategori: {{ $item->kategori_edu }}</small><br>
-        <a href="/edukasi/{{ $item->id }}">Lihat Detail</a>
-        <hr>
-    </div>
-@endforeach
-@endsection --}}
-
 @extends('layouts.app')
-
 @section('title', 'Pusat Edukasi')
 
 @push('styles')
@@ -27,7 +9,6 @@
 
 <section class="edu-container">
 
-    {{-- HEADER --}}
     <div class="edu-header">
         <h1>Pusat Edukasi Kesehatan Mental</h1>
         <p>
@@ -36,7 +17,6 @@
         </p>
     </div>
 
-    {{-- BLUE HIGHLIGHT (PENGGANTI CEK) --}}
     <div class="edu-highlight">
         <div class="edu-highlight-text">
             <h3>Kamu tidak sendirian</h3>
@@ -48,8 +28,6 @@
         <div class="edu-highlight-icon">💙</div>
     </div>
 
-
-    {{-- ARTIKEL --}}
     <div class="edu-section">
         <h2>Artikel</h2>
 
@@ -70,22 +48,19 @@
         </div>
     </div>
 
-    {{-- INFOGRAFIS --}}
     <div class="edu-section">
         <h2>Infografis</h2>
 
         <div class="edu-infogrid">
             @foreach ($edukasi->where('kategori_edu', 'infografis') as $item)
                 <a href="/edukasi/{{ $item->id }}" class="info-card">
-                    
-                    {{-- THUMB --}}
+          
                     <div class="info-thumb">
                         @if ($item->gambar)
                             <img src="{{ asset($item->gambar) }}" alt="{{ $item->judul }}">
                         @endif
                     </div>
 
-                    {{-- CONTENT --}}
                     <div class="info-content">
                         <span class="info-tag">INFOGRAFIS</span>
 
@@ -101,6 +76,12 @@
                 </a>
             @endforeach
         </div>
+    </div>
+
+    <div class="edu-action">
+        <a href="/homepage" class="edu-back">
+            ← Kembali ke Homepage
+        </a>
     </div>
 
 </section>
