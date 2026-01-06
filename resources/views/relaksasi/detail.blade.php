@@ -29,7 +29,7 @@
                 target="_blank"
                 class="relax-btn"
             >
-                📖 Buka Buku
+                Buka Buku
             </a>
         </div>
     @endif

@@ -10,17 +10,17 @@ class RelaksasiSeeder extends Seeder
     public function run(): void
     {
         Relaksasi::create([
-            'judul' => 'Panduan Pemulihan Diri',
+            'judul' => 'Berani Bahagia - Ichiro Kishimi & Fumitake Koga',
             'tipe' => 'buku',
-            'deskripsi' => 'Buku panduan sederhana untuk pemulihan kesehatan mental.',
-            'file_path' => 'buku/buku-pemulihan.pdf',
+            'deskripsi' => 'Buku pengembangan diri berbasis psikologi Adler yang membahas cara mencapai kebahagiaan sejati melalui dialog filosofis.',
+            'file_path' => 'buku/Berani Bahagia - Ichiro Kishimi & Fumitake Koga.pdf',
         ]);
 
         Relaksasi::create([
-            'judul' => 'Musik Relaksasi',
+            'judul' => 'Evaluasi - Hindia',
             'tipe' => 'musik',
-            'deskripsi' => 'Musik terapi untuk membantu relaksasi dan ketenangan.',
-            'file_path' => 'musik/musik-relaksasi.mp3',
+            'deskripsi' => 'Musik dengan nuansa tenang untuk membantu refleksi dan penerimaan diri.',
+            'file_path' => 'musik/Evaluasi.mp3',
         ]);
     }
 }
